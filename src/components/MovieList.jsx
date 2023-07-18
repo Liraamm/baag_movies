@@ -17,7 +17,7 @@ const MovieList = () => {
         alignItems: "center",
         justifyContent: "space-around",
         flexWrap: "wrap",
-        columnGap: "12px",
+        gap: "50px",
         margin: "100px 40px",
       }}
     >
