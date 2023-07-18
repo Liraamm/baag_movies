@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import MoviesPage from "../pages/MoviesPage";
 import AddMoviePage from "../pages/AddMoviePage";
 import NotFoundPage from "../pages/NotFoundPage";
+import EditMoviePage from "../pages/EditMoviePage";
 
 const MainRoutes = () => {
   return (
@@ -12,6 +13,7 @@ const MainRoutes = () => {
       <Route element={<MainLayout />}>
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/add" element={<AddMoviePage />} />
+        <Route path="/edit/:id" element={<EditMoviePage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/" element={<HomePage />} />
