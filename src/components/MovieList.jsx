@@ -16,6 +16,7 @@ const MovieList = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-evenly",
+        flexWrap: "wrap",
       }}
     >
       {movies.length > 0 ? (
