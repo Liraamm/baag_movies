@@ -11,17 +11,19 @@ const MovieItem = ({ item }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="card">
-      <div className="card-img">
-        <img src={item.img} alt="#" />{" "}
+
+    <div class="card">
+      <div class="card-img">
+        <img src={item.img} alt="#" width={200} />
       </div>
-      <div className="card-info">
-        <p className="title">{item.title}</p>
-        <p className="subtitle">{item.description}</p>
-        <p className="subtitle" style={{ fontSize: "10px" }}>
+      <div class="card-info">
+        <p class="title">{item.title}</p>
+        <p class="subtitle">{item.description}</p>
+        <p class="subtitle" style={{ fontSize: "12px", fontWeight: "400" }}>
           Director: {item.director}
         </p>
-        <p className="subtitle">Rating: {item.rating}</p>
+        <p class="subtitle">Rating: {item.rating}</p>
+
         <Button
           endIcon={<DeleteIcon />}
           sx={{ textTransform: "capitalize", color: "red" }}
