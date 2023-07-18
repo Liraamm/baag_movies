@@ -1,7 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useMovieContext } from "../contexts/MovieContext";
+import { Box } from "@mui/system";
+import MovieItem from "./MovieItem";
+import { CircularProgress } from "@mui/material";
 
 const MovieList = () => {
-  return <div>MovieList</div>;
+  const { movies, getMovies } = useMovieContext();
+  useEffect(() => {
+    getMovies();
+  }, []);
+
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-evenly",
+      }}
+    >
+      {movies.length > 0 ? (
+        movies.map((item) => <MovieItem key={item.id} item={item} />)
+      ) : (
+        <div>
+          <CircularProgress
+            sx={{ mx: "auto", mt: 5, displaY: "block" }}
+            size={100}
+          />
+        </div>
+      )}
+    </Box>
+  );
 };
 
 export default MovieList;
