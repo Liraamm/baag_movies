@@ -1,7 +1,12 @@
 import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
+import { useMovieContext } from "../contexts/MovieContext";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { Button } from "@mui/material";
 
 const MovieItem = ({ item }) => {
+  const { deleteMovies } = useMovieContext();
+
   return (
     <Card
       style={{
@@ -21,11 +26,14 @@ const MovieItem = ({ item }) => {
         <ListGroup.Item>Director: {item.director}</ListGroup.Item>
         <ListGroup.Item>Rating: {item.rating}</ListGroup.Item>
       </ListGroup>
-      <Card.Body>
-        {/* Сделай баттоны плиз */}
-        <Card.Link href="#">Edit</Card.Link>
-        <Card.Link href="#">Delete</Card.Link>
-      </Card.Body>
+
+      <Button
+        endIcon={<DeleteIcon />}
+        sx={{ textTransform: "capitalize", color: "red" }}
+        onClick={() => deleteMovies(item.id)}
+      >
+        Delete
+      </Button>
     </Card>
   );
 };
