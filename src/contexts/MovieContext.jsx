@@ -57,13 +57,12 @@ const MovieContext = ({ children }) => {
     }
   }
 
-
   const value = {
     movies: state.movies,
     getMovies,
     deleteMovies,
+    addMovie,
   };
-  const value = { movies: state.movies, getMovies, addMovie };
 
   return (
     <movieContext.Provider value={value}>{children}</movieContext.Provider>

@@ -15,8 +15,10 @@ const MovieList = () => {
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-evenly",
+        justifyContent: "space-around",
         flexWrap: "wrap",
+        columnGap: "12px",
+        margin: "100px 40px",
       }}
     >
       {movies.length > 0 ? (
