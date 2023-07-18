@@ -57,11 +57,35 @@ const MovieContext = ({ children }) => {
     }
   }
 
+  async function getOneMovie(id) {
+    try {
+      const { data } = await axios.get(`${API}/${id}`);
+
+      dispatch({
+        type: ACTIONS.movie,
+        payload: data,
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  async function editMovie(id, newData) {
+    try {
+      await axios.patch(`${API}/${id}`, newData);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   const value = {
     movies: state.movies,
+    movie: state.movie,
     getMovies,
     deleteMovies,
     addMovie,
+    getOneMovie,
+    editMovie,
   };
 
   return (
