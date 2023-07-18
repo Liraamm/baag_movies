@@ -42,12 +42,13 @@ const MovieContext = ({ children }) => {
   async function addMovie(newData) {
     try {
       await axios.post(API, newData);
+      getMovies();
     } catch (error) {
       console.log(error);
     }
   }
 
-  const value = { movies: state.movies, getMovies };
+  const value = { movies: state.movies, getMovies, addMovie };
   return (
     <movieContext.Provider value={value}>{children}</movieContext.Provider>
   );
