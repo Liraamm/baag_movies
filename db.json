@@ -17,19 +17,12 @@
       "rating": 12
     },
     {
-      "title": "titanic",
-      "description": "djsjdsds",
-      "id": 3,
-      "img": "https://media.licdn.com/dms/image/C560BAQHMnA03XDdf3w/company-logo_200_200/0/1519855918965?e=2147483647&v=beta&t=J3kUMZwIphc90TFKH5oOO9Sa9K59fimgJf-s_okU3zs",
-      "director": "STEVEN SPILBERG",
-      "rating": 12
-    },
       "title": "qwert",
       "description": "sdfg",
       "director": "qwert",
       "img": "https://media.licdn.com/dms/image/C560BAQHMnA03XDdf3w/company-logo_200_200/0/1519855918965?e=2147483647&v=beta&t=J3kUMZwIphc90TFKH5oOO9Sa9K59fimgJf-s_okU3zs",
       "rating": 0,
-      "id": 3
+      "id": 7
     },
     {
       "title": "qwerty",
@@ -40,20 +33,20 @@
       "id": 4
     },
     {
-      "title": "werty",
-      "description": "coming out",
-      "director": "wertyu",
-      "img": "https://media.licdn.com/dms/image/C560BAQHMnA03XDdf3w/company-logo_200_200/0/1519855918965?e=2147483647&v=beta&t=J3kUMZwIphc90TFKH5oOO9Sa9K59fimgJf-s_okU3zs",
-      "rating": 0,
-      "id": 5
-    },
-    {
       "title": "wdf",
       "description": "dfghj",
       "director": "etyui",
       "img": "https://media.licdn.com/dms/image/C560BAQHMnA03XDdf3w/company-logo_200_200/0/1519855918965?e=2147483647&v=beta&t=J3kUMZwIphc90TFKH5oOO9Sa9K59fimgJf-s_okU3zs",
       "rating": 0,
       "id": 6
+    },
+    {
+      "title": "qwert",
+      "description": "coming out",
+      "director": "qwert",
+      "img": "https://media.licdn.com/dms/image/C560BAQHMnA03XDdf3w/company-logo_200_200/0/1519855918965?e=2147483647&v=beta&t=J3kUMZwIphc90TFKH5oOO9Sa9K59fimgJf-s_okU3zs",
+      "rating": 0,
+      "id": 8
     }
   ]
 }
