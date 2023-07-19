@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import MoviesPage from "../pages/MoviesPage";
 import AddMoviePage from "../pages/AddMoviePage";
 import NotFoundPage from "../pages/NotFoundPage";
+import SecondaryLayout from "../layouts/SecondaryLayout";
 
 const MainRoutes = () => {
   return (
@@ -14,7 +15,9 @@ const MainRoutes = () => {
         <Route path="/add" element={<AddMoviePage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
-      <Route path="/" element={<HomePage />} />
+      <Route element={<SecondaryLayout />}>
+        <Route path="/" element={<HomePage />} />
+      </Route>
     </Routes>
   );
 };
