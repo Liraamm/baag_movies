@@ -18,6 +18,7 @@ const MovieItem = ({ item }) => {
       <div class="card-info">
         <p
           class="title"
+          style={{ cursor: "pointer" }}
           onClick={() => {
             navigate(`/details/${item.id}`);
           }}

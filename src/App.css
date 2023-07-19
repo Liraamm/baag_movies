@@ -6,7 +6,7 @@
   width: 190px;
   height: 254px;
   position: relative;
-  background: #f5f5f5;
+  background: #fbdcc4;
   color: #252525;
   border-radius: 4px;
   overflow: hidden;
@@ -25,7 +25,7 @@
 /* Image */
 .card-img {
   background: #322c24;
-  background: linear-gradient(to top, #22201c, #ffffff);
+  background: linear-gradient(to top, #31112c, #f2a07b);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -95,5 +95,5 @@
 }
 
 .back {
-  background-image: url(./assets/wave_background.svg);
+  background-color: #7d0633;
 }
