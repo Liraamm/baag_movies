@@ -11,6 +11,8 @@ const MovieList = () => {
     getMovies();
   }, []);
 
+  const sortedMovies = movies.sort((a, b) => (+a.rating > +b.rating ? -1 : 1));
+
   return (
     <div className="back">
       <Box
@@ -23,8 +25,8 @@ const MovieList = () => {
           margin: "100px 40px",
         }}
       >
-        {movies.length > 0 ? (
-          movies.map((item) => <MovieItem key={item.id} item={item} />)
+        {sortedMovies.length > 0 ? (
+          sortedMovies.map((item) => <MovieItem key={item.id} item={item} />)
         ) : (
           <div>
             <CircularProgress

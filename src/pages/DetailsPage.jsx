@@ -13,7 +13,7 @@ const DetailsPage = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#F2A07B", margin: "0px" }}>
       {movie && (
         <div
           style={{
