@@ -60,7 +60,6 @@ const MovieContext = ({ children }) => {
   async function getOneMovie(id) {
     try {
       const { data } = await axios.get(`${API}/${id}`);
-
       dispatch({
         type: ACTIONS.movie,
         payload: data,

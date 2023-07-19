@@ -29,7 +29,7 @@ const EditMoviePage = () => {
     description: "",
     director: "",
     img: "",
-    rating: 0,
+    rating: "",
   });
 
   useEffect(() => {
@@ -52,11 +52,12 @@ const EditMoviePage = () => {
       !formValue.title.trim() ||
       !formValue.description.trim() ||
       !formValue.director.trim() ||
-      !formValue.img.trim()
+      !formValue.img.trim() ||
+      !formValue.rating
     ) {
       return;
     }
-    editMovie(id, { ...formValue });
+    editMovie(id, { ...formValue, rating: +formValue.rating });
     navigate(-1);
   };
 
@@ -118,7 +119,15 @@ const EditMoviePage = () => {
               value={formValue.img}
               onChange={handleChange}
             />
-
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="rating"
+              label="Rating"
+              value={formValue.rating}
+              onChange={handleChange}
+            />
             <Button
               type="submit"
               fullWidth

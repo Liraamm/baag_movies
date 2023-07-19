@@ -11,18 +11,24 @@ const MovieItem = ({ item }) => {
   const navigate = useNavigate();
 
   return (
-
     <div class="card">
       <div class="card-img">
         <img src={item.img} alt="#" width={200} />
       </div>
       <div class="card-info">
-        <p class="title">{item.title}</p>
+        <p
+          class="title"
+          onClick={() => {
+            navigate(`/details/${item.id}`);
+          }}
+        >
+          {item.title}
+        </p>
         <p class="subtitle">{item.description}</p>
         <p class="subtitle" style={{ fontSize: "12px", fontWeight: "400" }}>
           Director: {item.director}
         </p>
-        <p class="subtitle">Rating: {item.rating}</p>
+        <p class="subtitle">Rating: {item.rating} ⭐</p>
 
         <Button
           endIcon={<DeleteIcon />}
