@@ -12,23 +12,35 @@ import {
   Container,
   FormControl,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMovieContext } from "../contexts/MovieContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const defaultTheme = createTheme();
 
-const AddMoviePage = () => {
+const EditMoviePage = () => {
   const navigate = useNavigate();
 
-  const { addMovie } = useMovieContext();
+  const { movie, getOneMovie, editMovie } = useMovieContext();
+  const { id } = useParams();
+
   const [formValue, setFormValue] = useState({
     title: "",
     description: "",
     director: "",
     img: "",
-    rating: 0,
+    rating: "",
   });
+
+  useEffect(() => {
+    getOneMovie(id);
+  }, []);
+
+  useEffect(() => {
+    if (movie) {
+      setFormValue(movie);
+    }
+  }, [movie]);
 
   function handleChange(e) {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
@@ -40,12 +52,13 @@ const AddMoviePage = () => {
       !formValue.title.trim() ||
       !formValue.description.trim() ||
       !formValue.director.trim() ||
-      !formValue.img.trim()
+      !formValue.img.trim() ||
+      !formValue.rating
     ) {
       return;
     }
-    addMovie({ ...formValue });
-    navigate("/movies");
+    editMovie(id, { ...formValue, rating: +formValue.rating });
+    navigate(-1);
   };
 
   return (
@@ -61,7 +74,7 @@ const AddMoviePage = () => {
           }}
         >
           <Typography component="h1" variant="h5">
-            Add movie
+            Edit Movie
           </Typography>
           <Box
             component="form"
@@ -106,14 +119,22 @@ const AddMoviePage = () => {
               value={formValue.img}
               onChange={handleChange}
             />
-
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="rating"
+              label="Rating"
+              value={formValue.rating}
+              onChange={handleChange}
+            />
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Submit
+              Save
             </Button>
           </Box>
         </Box>
@@ -122,4 +143,4 @@ const AddMoviePage = () => {
   );
 };
 
-export default AddMoviePage;
+export default EditMoviePage;
