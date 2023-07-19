@@ -8,12 +8,28 @@ import Menu from "@mui/material/Menu";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { useNavigate } from "react-router";
+import { NavLink } from "react-router-dom";
 
-const settings = ["Home", "Movies", "TV Serials"];
+const settings = [
+  {
+    title: "Home",
+    link: "/",
+  },
+  {
+    title: "Movies",
+    link: "/movies",
+  },
+  {
+    title: "Add Movie",
+    link: "/add",
+  },
+];
 
 export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -31,17 +47,18 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "gray" }}>
+    <AppBar position="static" sx={{ backgroundColor: "rgba(49, 17, 44, 0.9)" }}>
       <Toolbar disableGutters>
         <Box sx={{ flexGrow: 0 }}>
-          <Tooltip title="Open settings">
+          <Tooltip title="More">
             <IconButton
               onClick={handleOpenUserMenu}
               sx={{ p: 0, marginLeft: 10 }}
             >
               <Avatar
+                sx={{ borderRadius: 0 }}
                 alt="Remy Sharp"
-                src="https://bcassetcdn.com/public/blog/wp-content/uploads/2021/10/21172945/Ghostbusters.png"
+                src="https://www.svgrepo.com/download/68443/movie-camera.svg"
               />
             </IconButton>
           </Tooltip>
@@ -62,8 +79,13 @@ export default function Navbar() {
             onClose={handleCloseUserMenu}
           >
             {settings.map((setting) => (
-              <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">{setting}</Typography>
+              <MenuItem
+                component={NavLink}
+                to={setting.link}
+                key={setting.title}
+                onClick={handleCloseUserMenu}
+              >
+                <Typography textAlign="center">{setting.title}</Typography>
               </MenuItem>
             ))}
           </Menu>

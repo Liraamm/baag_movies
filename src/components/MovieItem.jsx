@@ -11,13 +11,16 @@ const MovieItem = ({ item }) => {
   const navigate = useNavigate();
 
   return (
-    <div class="card">
-      <div class="card-img">
-        <img src={item.img} alt="#" width={200} />
+    <div
+      className="card"
+      style={{ height: "300px", width: "200px", marginTop: "40px" }}
+    >
+      <div className="card-img">
+        <img src={item.img} alt="#" height={250} width={200} />
       </div>
-      <div class="card-info">
+      <div className="card-info">
         <p
-          class="title"
+          className="title"
           style={{ cursor: "pointer" }}
           onClick={() => {
             navigate(`/details/${item.id}`);
@@ -25,11 +28,11 @@ const MovieItem = ({ item }) => {
         >
           {item.title}
         </p>
-        <p class="subtitle">{item.description}</p>
-        <p class="subtitle" style={{ fontSize: "12px", fontWeight: "400" }}>
+        <p className="subtitle">{item.description}</p>
+        <p className="subtitle" style={{ fontSize: "12px", fontWeight: "400" }}>
           Director: {item.director}
         </p>
-        <p class="subtitle">Rating: {item.rating} ⭐</p>
+        <p className="subtitle">Rating: {item.rating} ⭐</p>
 
         <Button
           endIcon={<DeleteIcon />}

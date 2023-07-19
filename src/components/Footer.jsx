@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="main-footer">
-      <div className="container">
+      <div className="container" style={{ marginTop: "30px" }}>
         <div className="row">
           <div className="col">
             <h4>GENRE</h4>
@@ -17,9 +17,6 @@ const Footer = () => {
               <li>For kids</li>
               <li>Comedy</li>
               <li>Cartoons</li>
-              <li>Sci-fi</li>
-              <li>Action</li>
-              <li>Drama</li>
             </ul>
           </div>
           <div className="col">
@@ -29,9 +26,6 @@ const Footer = () => {
               <li>USA</li>
               <li>Turkey</li>
               <li>France</li>
-              <li>Germany</li>
-              <li>South Korea</li>
-              <li>Italy</li>
             </ul>
           </div>
           <div className="col">
@@ -69,10 +63,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-        </div>
-        <hr />
-        <div className="row">
-          <p className="col-sm"></p>
         </div>
       </div>
     </div>

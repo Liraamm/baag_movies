@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div style={{ position: "relative", paddingBottom: "200px" }}>
       <Navbar />
       <Outlet />
       <Footer />

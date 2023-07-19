@@ -50,17 +50,25 @@ const AddMoviePage = () => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+      <Container
+        component="main"
+        maxWidth="xs"
+        sx={{
+          backgroundColor: "rgba(242, 160, 123, 0.9)",
+          borderRadius: "30px",
+        }}
+      >
         <CssBaseline />
         <Box
           sx={{
             marginTop: 8,
+            marginBottom: 8,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
           }}
         >
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h5" color="white">
             Add movie
           </Typography>
           <Box
@@ -108,6 +116,7 @@ const AddMoviePage = () => {
             />
 
             <Button
+              style={{ backgroundColor: "#7D0633" }}
               type="submit"
               fullWidth
               variant="contained"
