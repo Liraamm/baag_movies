@@ -5,8 +5,10 @@ import HomePage from "../pages/HomePage";
 import MoviesPage from "../pages/MoviesPage";
 import AddMoviePage from "../pages/AddMoviePage";
 import NotFoundPage from "../pages/NotFoundPage";
+import SecondaryLayout from "../layouts/SecondaryLayout";
 import EditMoviePage from "../pages/EditMoviePage";
 import DetailsPage from "../pages/DetailsPage";
+
 
 const MainRoutes = () => {
   return (
@@ -18,7 +20,9 @@ const MainRoutes = () => {
         <Route path="/details/:id" element={<DetailsPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
-      <Route path="/" element={<HomePage />} />
+      <Route element={<SecondaryLayout />}>
+        <Route path="/" element={<HomePage />} />
+      </Route>
     </Routes>
   );
 };

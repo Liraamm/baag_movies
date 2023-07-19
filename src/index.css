@@ -5,12 +5,61 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://wallpapers.com/images/hd/scary-movies-1500-x-938-wallpaper-v9ukdt0yu06dttsn.jpg");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  color: white;
+  font-size: 80px;
+}
+.row {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  /* cursor: pointer; */
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bold;
+  margin: 1rem 3rem;
+  font-size: 100px;
+  color: rgb(85, 247, 212);
+  animation: change-color 5s linear infinite;
+  text-shadow: 0px 0px 8px white;
+}
+.tekst {
+  /* cursor: pointer; */
+  font-family: "Chakra Petch", sans-serif;
+  margin: 1rem 3rem;
+  font-size: 80px;
+  color: rgb(85, 247, 212);
+  animation: change-color 5s linear infinite;
+  text-shadow: 0px 0px 8px white;
+}
+
+@keyframes change-color {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+=======
 
 .main-footer {
   color: #fbdcc4;
