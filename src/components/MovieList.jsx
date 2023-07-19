@@ -3,6 +3,7 @@ import { useMovieContext } from "../contexts/MovieContext";
 import { Box } from "@mui/system";
 import MovieItem from "./MovieItem";
 import { CircularProgress } from "@mui/material";
+import back from "../assets/wave_background.svg";
 
 const MovieList = () => {
   const { movies, getMovies } = useMovieContext();
@@ -11,27 +12,29 @@ const MovieList = () => {
   }, []);
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-around",
-        flexWrap: "wrap",
-        gap: "50px",
-        margin: "100px 40px",
-      }}
-    >
-      {movies.length > 0 ? (
-        movies.map((item) => <MovieItem key={item.id} item={item} />)
-      ) : (
-        <div>
-          <CircularProgress
-            sx={{ mx: "auto", mt: 5, displaY: "block" }}
-            size={100}
-          />
-        </div>
-      )}
-    </Box>
+    <div className="back">
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
+          gap: "50px",
+          margin: "100px 40px",
+        }}
+      >
+        {movies.length > 0 ? (
+          movies.map((item) => <MovieItem key={item.id} item={item} />)
+        ) : (
+          <div>
+            <CircularProgress
+              sx={{ mx: "auto", mt: 5, displaY: "block" }}
+              size={100}
+            />
+          </div>
+        )}
+      </Box>
+    </div>
   );
 };
 

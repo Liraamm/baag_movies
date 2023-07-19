@@ -5,6 +5,7 @@ import { SiGithub } from "react-icons/si";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
+
 const Footer = () => {
   return (
     <div className="main-footer">

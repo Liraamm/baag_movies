@@ -93,3 +93,7 @@
 .card:hover .social-media li:nth-child(3) {
   transition-delay: 0.2s;
 }
+
+.back {
+  background-image: url(./assets/wave_background.svg);
+}
