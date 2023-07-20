@@ -9,7 +9,8 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import LiveSearch from "./LiveSearch";
 
 const settings = [
   {
@@ -30,6 +31,7 @@ export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -90,6 +92,7 @@ export default function Navbar() {
             ))}
           </Menu>
         </Box>
+        <LiveSearch />
       </Toolbar>
     </AppBar>
   );
