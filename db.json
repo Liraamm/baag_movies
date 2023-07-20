@@ -3,10 +3,10 @@
     {
       "title": "Avengers Endgame",
       "description": "Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team ",
-      "id": 11,
+      "id": 17,
       "img": "https://terriertimesnews.com/wp-content/uploads/2019/03/endgame-739x900.jpg",
       "director": "Marvel Studios",
-      "rating": 5,
+      "rating": 3,
       "category": "Movie"
     },
     {
@@ -41,18 +41,9 @@
       "description": "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75.",
       "director": " Robert Zemeckis",
       "img": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
-      "rating": 1,
+      "rating": 3,
       "category": "Movie",
       "id": 10
-    },
-    {
-      "title": "qwertyu",
-      "description": "sdfg",
-      "director": "wertyu",
-      "img": "https://media.licdn.com/dms/image/C560BAQHMnA03XDdf3w/company-logo_200_200/0/1519855918965?e=2147483647&v=beta&t=J3kUMZwIphc90TFKH5oOO9Sa9K59fimgJf-s_okU3zs",
-      "rating": 0,
-      "category": "Show",
-      "id": 11
     }
   ]
 }

@@ -29,7 +29,7 @@ const EditMoviePage = () => {
     description: "",
     director: "",
     img: "",
-    rating: "",
+    rating: 0,
     category: "",
   });
 
