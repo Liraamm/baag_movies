@@ -1,24 +1,19 @@
 import React, { useEffect } from "react";
 import MovieList from "../components/MovieList";
 import { Box, Pagination } from "@mui/material";
-import { useSearchParams } from "react-router-dom";
-import { useMovieContext } from "../contexts/MovieContext";
 import { LIMIT } from "../utils/const";
 import Filter from "../components/Filter";
 import { useMovieContext } from "../contexts/MovieContext";
 import { useSearchParams } from "react-router-dom";
 
-
-
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { getMovies, pageTotalCount, page, setPage } = useMovieContext();
 
-
   useEffect(() => {
     getMovies();
   }, [searchParams]);
-  
+
   useEffect(() => {
     const currentParams = Object.fromEntries([...searchParams]);
 
@@ -29,7 +24,6 @@ const MoviesPage = () => {
     });
   }, [page]);
 
-
   return (
     <div>
       <Filter />
@@ -38,14 +32,15 @@ const MoviesPage = () => {
         sx={{
           maxWidth: "max-content",
           margin: "50px auto",
-          backgroundColor: "midnightblue",
+          backgroundColor: "#FBDCC4",
+          borderRadius: "10px",
         }}
       >
         <Pagination
           count={pageTotalCount}
           page={page}
           onChange={(_, value) => setPage(value)}
-          color="secondary"
+          sx={{ color: "#31112C" }}
         />
       </Box>
     </div>
