@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useReducer } from "react";
-import { ACTIONS, API } from "../utils/const";
+import React, { createContext, useContext, useReducer, useState } from "react";
+import { ACTIONS, API, LIMIT } from "../utils/const";
 import axios from "axios";
+import { useSearchParams } from "react-router-dom";
 
 const movieContext = createContext();
 
@@ -11,6 +12,7 @@ export function useMovieContext() {
 const init = {
   movies: [],
   movie: null,
+  pageTotalCount: 1,
 };
 
 function reducer(state, action) {
@@ -19,17 +21,32 @@ function reducer(state, action) {
       return { ...state, movies: action.payload };
     case ACTIONS.movie:
       return { ...state, movie: action.payload };
+    case ACTIONS.pageTotalCount:
+      return { ...state, pageTotalCount: action.payload };
+
     default:
       return state;
   }
 }
 
 const MovieContext = ({ children }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [state, dispatch] = useReducer(reducer, init);
+  const [page, setPage] = useState(+searchParams.get("_page") || 1);
 
   async function getMovies() {
     try {
-      const { data } = await axios.get(API);
+      const { data, headers } = await axios.get(
+        `${API}${window.location.search}`
+      );
+
+      const totalCount = Math.ceil(headers["x-total-count"] / LIMIT);
+
+      dispatch({
+        type: ACTIONS.pageTotalCount,
+        payload: totalCount,
+      });
+
       dispatch({
         type: ACTIONS.movies,
         payload: data,
@@ -80,6 +97,9 @@ const MovieContext = ({ children }) => {
   const value = {
     movies: state.movies,
     movie: state.movie,
+    pageTotalCount: state.pageTotalCount,
+    page,
+    setPage,
     getMovies,
     deleteMovies,
     addMovie,
