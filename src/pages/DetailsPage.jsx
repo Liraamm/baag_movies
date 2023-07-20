@@ -13,7 +13,7 @@ const DetailsPage = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#F2A07B", margin: "0px" }}>
+    <div style={{ backgroundColor: "rgb(242, 160, 123, 0.7)", margin: "0px" }}>
       {movie && (
         <div
           style={{
@@ -23,12 +23,20 @@ const DetailsPage = () => {
             margin: "80px",
           }}
         >
-          <img width={400} src={movie.img} />
-          <div style={{ textAlign: "start", fontSize: "60px" }}>
+          <img width={400} src={movie.img} style={{ padding: "20px" }} />
+          <div
+            style={{
+              textAlign: "start",
+              fontSize: "60px",
+              fontFamily: "sans-serif",
+              marginLeft: "40px",
+              color: "white",
+            }}
+          >
             <p>{movie.title}</p>
-            <p>{movie.description}</p>
-            <p>Director: {movie.director}</p>
-            <p>Rating: {movie.rating} ⭐</p>
+            <p style={{ fontSize: "30px" }}>{movie.description}</p>
+            <p style={{ fontSize: "30px" }}>Director: {movie.director}</p>
+            <p style={{ fontSize: "30px" }}>Rating: {movie.rating} ⭐</p>
           </div>
         </div>
       )}
