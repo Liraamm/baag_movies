@@ -3,10 +3,9 @@
     {
       "title": "Avengers Endgame",
       "description": "Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team ",
-      "id": 1,
+      "id": 11,
       "img": "https://terriertimesnews.com/wp-content/uploads/2019/03/endgame-739x900.jpg",
       "director": "Marvel Studios",
-      "category": "Movie",
       "rating": 5
     },
     {
@@ -14,34 +13,31 @@
       "description": "Titanic is a 1997 American epic romance and disaster film",
       "director": "James Cameron",
       "img": "https://m.media-amazon.com/images/M/MV5BMTA4MjIyZWEtZjYwMS00ZmQ1LWJiMDEtMWNiNTI5NWE3OGJjXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_FMjpg_UX1000_.jpg",
-      "rating": 5,
-      "category": "Movie",
-      "id": 7
+      "rating": 4,
+      "id": 12
     },
     {
       "title": "Barbie",
       "description": "Barbie suffers a crisis that leads her to question her world and her existence.",
       "director": "Greta Gerwig",
       "img": "https://deadline.com/wp-content/uploads/2023/04/barbie-BARBIE_VERT_TSR_W_TALENT_2764x4096_DOM_rgb.jpg?w=800",
-      "rating": 4,
-      "category": "Movie",
-      "id": 8
+      "rating": 3,
+      "id": 13
     },
     {
       "title": "Wonka",
-      "description": "The story will focus specifically on a young Willy Wonka and how he met the Oompa-Loompas on one of his earliest adventures.",
+      "description": "The story will focus specifically on a young Willy Wonka and how he met the Oompa-Loompas.",
       "director": " Paul King",
       "img": "https://i.ebayimg.com/images/g/KRYAAOSwCkBkrlbM/s-l1200.jpg",
-      "rating": 4,
-      "category": "Movie",
-      "id": 9
+      "rating": 2,
+      "id": 14
     },
     {
       "title": "Forrest Gump",
       "description": "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75.",
       "director": " Robert Zemeckis",
       "img": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
-      "rating": 5,
+      "rating": 1,
       "category": "Movie",
       "id": 10
     },
