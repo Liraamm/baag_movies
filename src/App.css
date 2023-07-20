@@ -44,7 +44,7 @@
 
 .subtitle {
   letter-spacing: 1px;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 /* Hovers */
@@ -58,12 +58,8 @@
 
 .back {
   background-color: rgba(125, 6, 51, 0.8);
-  /* max-width: 70%; */
+  width: 100%;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 600px;
   margin-bottom: 20px;
   margin-top: 20px;
 }

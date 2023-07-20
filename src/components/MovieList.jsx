@@ -18,11 +18,11 @@ const MovieList = () => {
       <Box
         sx={{
           display: "flex",
-          alignItems: "center",
-          justifyContent: "space-around",
           flexWrap: "wrap",
-          gap: "50px",
-          margin: "100px 40px",
+          width: "100%",
+          justifyContent: "space-evenly",
+          height: "600px",
+          paddingTop: "100px",
         }}
       >
         {sortedMovies.length > 0 ? (

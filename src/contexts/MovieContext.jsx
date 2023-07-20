@@ -29,7 +29,7 @@ const MovieContext = ({ children }) => {
 
   async function getMovies() {
     try {
-      const { data } = await axios.get(API);
+      const { data } = await axios.get(`${API}${window.location.search}`);
       dispatch({
         type: ACTIONS.movies,
         payload: data,

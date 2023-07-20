@@ -28,6 +28,7 @@ const AddMoviePage = () => {
     director: "",
     img: "",
     rating: 0,
+    category: "",
   });
 
   function handleChange(e) {
@@ -40,7 +41,8 @@ const AddMoviePage = () => {
       !formValue.title.trim() ||
       !formValue.description.trim() ||
       !formValue.director.trim() ||
-      !formValue.img.trim()
+      !formValue.img.trim() ||
+      !formValue.category.trim()
     ) {
       return;
     }
@@ -114,7 +116,18 @@ const AddMoviePage = () => {
               value={formValue.img}
               onChange={handleChange}
             />
-
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Category</InputLabel>
+              <Select
+                value={formValue.category}
+                onChange={handleChange}
+                name="category"
+                label="Category"
+              >
+                <MenuItem value="Show">Show</MenuItem>
+                <MenuItem value="Movie">Movie</MenuItem>
+              </Select>
+            </FormControl>
             <Button
               style={{ backgroundColor: "#7D0633" }}
               type="submit"

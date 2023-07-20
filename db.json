@@ -6,6 +6,7 @@
       "id": 1,
       "img": "https://terriertimesnews.com/wp-content/uploads/2019/03/endgame-739x900.jpg",
       "director": "Marvel Studios",
+      "category": "Movie",
       "rating": 5
     },
     {
@@ -14,6 +15,7 @@
       "director": "James Cameron",
       "img": "https://m.media-amazon.com/images/M/MV5BMTA4MjIyZWEtZjYwMS00ZmQ1LWJiMDEtMWNiNTI5NWE3OGJjXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_FMjpg_UX1000_.jpg",
       "rating": 5,
+      "category": "Movie",
       "id": 7
     },
     {
@@ -22,6 +24,7 @@
       "director": "Greta Gerwig",
       "img": "https://deadline.com/wp-content/uploads/2023/04/barbie-BARBIE_VERT_TSR_W_TALENT_2764x4096_DOM_rgb.jpg?w=800",
       "rating": 4,
+      "category": "Movie",
       "id": 8
     },
     {
@@ -30,6 +33,7 @@
       "director": " Paul King",
       "img": "https://i.ebayimg.com/images/g/KRYAAOSwCkBkrlbM/s-l1200.jpg",
       "rating": 4,
+      "category": "Movie",
       "id": 9
     },
     {
@@ -38,7 +42,17 @@
       "director": " Robert Zemeckis",
       "img": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
       "rating": 5,
+      "category": "Movie",
       "id": 10
+    },
+    {
+      "title": "qwertyu",
+      "description": "sdfg",
+      "director": "wertyu",
+      "img": "https://media.licdn.com/dms/image/C560BAQHMnA03XDdf3w/company-logo_200_200/0/1519855918965?e=2147483647&v=beta&t=J3kUMZwIphc90TFKH5oOO9Sa9K59fimgJf-s_okU3zs",
+      "rating": 0,
+      "category": "Show",
+      "id": 11
     }
   ]
 }
