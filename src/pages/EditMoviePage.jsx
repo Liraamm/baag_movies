@@ -30,6 +30,7 @@ const EditMoviePage = () => {
     director: "",
     img: "",
     rating: "",
+    category: "",
   });
 
   useEffect(() => {
@@ -53,7 +54,8 @@ const EditMoviePage = () => {
       !formValue.description.trim() ||
       !formValue.director.trim() ||
       !formValue.img.trim() ||
-      !formValue.rating
+      !formValue.rating ||
+      !formValue.category.trim()
     ) {
       return;
     }
@@ -136,6 +138,18 @@ const EditMoviePage = () => {
               value={formValue.rating}
               onChange={handleChange}
             />
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Category</InputLabel>
+              <Select
+                value={formValue.category}
+                onChange={handleChange}
+                name="category"
+                label="Category"
+              >
+                <MenuItem value="Show">Show</MenuItem>
+                <MenuItem value="Movie">Movie</MenuItem>
+              </Select>
+            </FormControl>
             <Button
               style={{ backgroundColor: "#7D0633" }}
               type="submit"
