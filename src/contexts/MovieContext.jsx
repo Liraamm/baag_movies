@@ -46,7 +46,6 @@ const MovieContext = ({ children }) => {
         type: ACTIONS.pageTotalCount,
         payload: totalCount,
       });
-
       dispatch({
         type: ACTIONS.movies,
         payload: data,

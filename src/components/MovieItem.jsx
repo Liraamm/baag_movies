@@ -29,10 +29,8 @@ const MovieItem = ({ item }) => {
           {item.title}
         </p>
         <p className="subtitle">{item.description}</p>
-        <p className="subtitle" style={{ fontSize: "12px", fontWeight: "400" }}>
-          Director: {item.director}
-        </p>
         <p className="subtitle">Rating: {item.rating} ⭐</p>
+        <p className="subtitle">Category: {item.category}</p>
 
         <Button
           endIcon={<DeleteIcon />}
